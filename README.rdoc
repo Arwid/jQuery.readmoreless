@@ -1,9 +1,13 @@
 = jQuery.readmoreless
 
-Minimize long paragraphs and make expandable with "more" and "less" links. Either minimize on a length or on a selector.
+author:: Arwid Bancewicz http://arwid.ca
+version:: 0.1
+updated:: 23 Feb 2011
+
+Minimize long paragraphs and make expandable with "more" and "less" links. Either collapse to a length or a selector.
 
 = Usage
-
+To collapse to a length:
   $(".bio").readmoreless();
   
   $(".bio").readmoreless({
@@ -14,6 +18,11 @@ Minimize long paragraphs and make expandable with "more" and "less" links. Eithe
     less_link: '<a class="less">Read&nbsp;Less</a>'
   });
 
+To collapse to a selector:
+  $(".bio").readmoreless({
+    substr: false
+  });
+  
   $(".bio").readmoreless({
     substr: false,
     less_selector: ":first",

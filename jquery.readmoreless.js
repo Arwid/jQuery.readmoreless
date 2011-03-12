@@ -1,11 +1,11 @@
 /*!
  * jQuery.readmoreless - Minimize long paragraphs and make expandable with 
- * "more" and "less" links. Either minimize on a length or on a selector.
+ * "more" and "less" links. Either collapse to a length or a selector.
  *
  * Inspired by jquery.readmore 1.1 by Jake Trent  http://www.jtsnake.com/
  *
  * Copyright 2011 Arwid Bancewicz
- * Licensed under the MIT lice
+ * Licensed under the MIT license
  * http://www.opensource.org/licenses/mit-license.php
  * 
  * @date 23 Feb 2011
