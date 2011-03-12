@@ -1,0 +1,27 @@
+= jQuery.readmoreless
+
+Minimize long paragraphs and make expandable with "more" and "less" links. Either minimize on a length or on a selector.
+
+= Usage
+
+  $(".bio").readmoreless();
+  
+  $(".bio").readmoreless({
+    substr: true,
+    substr_len: 500,
+    ellipses: '&#8230;',
+    more_link: '<a class="more">Read&nbsp;More</a>',
+    less_link: '<a class="less">Read&nbsp;Less</a>'
+  });
+
+  $(".bio").readmoreless({
+    substr: false,
+    less_selector: ":first",
+    ellipses: '&#8230;',
+    more_link: '<a class="more">Read&nbsp;More</a>',
+    less_link: '<a class="less">Read&nbsp;Less</a>'
+  })
+
+= License
+
+jQUery.readmoreless is covered by the MIT License.
