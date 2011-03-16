@@ -19,28 +19,29 @@
         $.fn.readmoreless.defaults, settings);
 
         this.each(function() {
-            $(this).data("opts", opts);
+			var self = $(this);
+            self.data("opts", opts);
             if (opts.substr) {
             // Minimize on a length
-                if ($(this).html().length > opts.substr_len) {
-                    split($(this));
-                    createLinks($(this));
+                if (self.html().length > opts.substr_len) {
+                    split(self);
+                    createLinks(self);
                 }
             } else {
             // Minimize on a selector
                 // append links
-                $(this).append(opts.more_link).append(opts.less_link);
+                self.append(opts.more_link).append(opts.less_link);
                 // hide the rest
-                $(this).children(":not(" + opts.less_selector + "):not(.more)").hide();
+                self.children(":not(" + opts.less_selector + "):not(.more)").hide();
                 // create click handlers
-                $(this).children(".more").click(function() {
+                self.children(".more").click(function() {
                     $(this).hide().siblings(":not(" + opts.less_selector + "):not(.more):not(.less)").animate({
                         'opacity': 'toggle'
                     },
                     1000)
                     .siblings(".less").show();
                 });
-                $(this).children(".less").click(function() {
+                self.children(".less").click(function() {
                     $(this).hide().siblings(":not(:first)").hide()
                     .siblings(".more").show();
                 });
